@@ -53,15 +53,23 @@
       font-weight: 500;
       font-family: var(--font-code); 
       text-transform: uppercase; 
-      letter-spacing: -0.5px; /* Tighter tracking for code look */
+      letter-spacing: -0.5px; 
     }
     nav a:hover, nav a.active{ color: var(--accent-red); }
 
-    /* Hero Section */
+    /* --- HERO SECTION (Flexbox Layout) --- */
     .hero{ 
-      margin-bottom: 50px; /* Reduced gap */
+      margin-bottom: 60px;
+      display: flex;            /* Enables side-by-side layout */
+      align-items: flex-start;  /* Aligns items to the top */
+      gap: 50px;                /* Space between text and image */
     }
     
+    /* Container for the text part */
+    .hero-text {
+      flex: 1; /* Takes up remaining space */
+    }
+
     .hero h1{ 
       font-size: 64px; 
       letter-spacing: -2px; 
@@ -79,7 +87,7 @@
       padding: 5px 10px; 
       border-radius: 4px; 
       display: inline-block; 
-      margin-bottom: 15px; /* Tight gap to next line */
+      margin-bottom: 15px; 
       font-weight: 500;
     }
 
@@ -87,24 +95,36 @@
     .edu-data {
       font-family: var(--font-code);
       font-size: 15px;
-      color: var(--accent-green); /* Dark Green for visibility */
-      margin-bottom: 24px; /* Space before paragraph */
+      color: var(--accent-green); 
+      margin-bottom: 24px; 
       display: block;
       
       /* The "Active Line" look */
       border-left: 3px solid var(--accent-red);
       padding-left: 15px;
-      line-height: 1.4;
+      line-height: 1.6; /* Increased slightly for multiline readability */
     }
 
     /* 3. Hero Paragraph */
     .hero p{ 
       font-size: 24px; 
       color: var(--text-light-green);
-      max-width: 850px; 
       font-weight: 400; 
       margin-top: 0; 
       line-height: 1.5;
+    }
+
+    /* --- PROFILE PICTURE --- */
+    .profile-pic {
+      /* INCREASED SIZE: Was 220px, now 300px */
+      width: 300px;
+      height: 300px;
+      
+      border-radius: 50%;          /* Makes it a circle */
+      object-fit: cover;           /* Prevents squishing */
+      border: 3px solid var(--accent-red); 
+      flex-shrink: 0;              /* Prevents image shrinking */
+      box-shadow: 4px 4px 0 rgba(47, 79, 79, 0.1);
     }
 
     /* Grid Layout */
@@ -166,6 +186,29 @@
     }
     .contact-link:hover{ color: var(--accent-green); text-decoration: underline; }
 
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column-reverse; /* Stack: Image on top, text below */
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+      }
+      .edu-data {
+        /* Change border from left to top for center alignment */
+        border-left: none;
+        border-top: 3px solid var(--accent-red);
+        padding-left: 0;
+        padding-top: 15px;
+        display: inline-block;
+      }
+      .profile-pic {
+        /* Smaller size for mobile screens */
+        width: 200px;
+        height: 200px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -178,15 +221,24 @@
     </nav>
 
     <header class="hero">
-      <h1>Ivy Weng</h1>
-      
-      <span class="status-bar">Social Studies → Stats & ML</span>
-      
-      <span class="edu-data">
-        B.A. Statistics & Machine Learning @ Carnegie Mellon University (Class of 2029)
-      </span>
+      <div class="hero-text">
+        <h1>Ivy Weng</h1>
+        
+        <span class="status-bar">Social Studies → Stats & ML</span>
+        
+        <span class="edu-data">
+          B.A. Statistics & Machine Learning @ Carnegie Mellon University<br>
+          (Class of 2029)
+        </span>
 
-      <p>Quantitative Storyteller. <br>I bridge the gap between unstructured cultural data and systematic insights.</p>
+        <p>
+          Quantitative Storyteller.<br>
+          I bridge the gap between unstructured cultural data and<br>
+          systematic insights.
+        </p>
+      </div>
+
+      <img src="assets/profilepic.jpg" alt="Ivy Weng" class="profile-pic">
     </header>
 
     <section class="grid">
@@ -230,6 +282,13 @@
       <div class="contact-block">
         <span class="contact-label">Location</span>
         <span>Carnegie Mellon University</span>
+      </div>
+      <div class="contact-block">
+        <span class="contact-label">Colophon</span>
+        <span style="opacity:0.7;">
+          Built with HTML/CSS.<br>
+          Code assisted by <strong style="color:var(--accent-green)">Gemini</strong>.
+        </span>
       </div>
     </footer>
   </div>
