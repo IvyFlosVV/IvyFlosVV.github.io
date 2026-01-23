@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ivy Weng | Stats + ML</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* RETRO WARM THEME */
+      --bg: #f2efe9;
+      --card-bg: #fbf9f5;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --line: rgba(47, 79, 79, 0.15);
+      --accent-green: #2f4f4f; 
+      --accent-red: #8b3a3a;
+      
+      /* Lighter text tint for Hero */
+      --text-light-green: #4a6b6b; 
+
+      /* FONTS */
+      --font-sans: "Crimson Pro", serif;
+      --font-code: "JetBrains Mono", monospace; /* VS Code Style */
+    }
+
+    body{
+      margin:0; 
+      font-family: var(--font-sans);
+      background: var(--bg); 
+      color: var(--text); 
+      line-height: 1.6;
+      font-size: 20px; 
+    }
+    
+    a{ text-decoration: none; color: inherit; transition: 0.2s; }
+    
+    .wrap{ max-width: 960px; margin: 0 auto; padding: 80px 24px; min-height: 100vh; display: flex; flex-direction: column; }
+    
+    /* Navigation */
+    nav{ 
+      display: flex; gap: 30px; margin-bottom: 80px; 
+      border-bottom: 2px solid var(--line); padding-bottom: 24px; 
+    }
+    nav a{ 
+      color: var(--muted); 
+      font-size: 16px; 
+      font-weight: 500;
+      font-family: var(--font-code); 
+      text-transform: uppercase; 
+      letter-spacing: -0.5px; /* Tighter tracking for code look */
+    }
+    nav a:hover, nav a.active{ color: var(--accent-red); }
+
+    /* Hero Section */
+    .hero{ 
+      margin-bottom: 50px; /* Reduced gap */
+    }
+    
+    .hero h1{ 
+      font-size: 64px; 
+      letter-spacing: -2px; 
+      margin: 0 0 16px 0; 
+      color: var(--text-light-green);
+      line-height: 1.1;
+    }
+    
+    /* 1. Status Bar (Top Tag) */
+    .status-bar{ 
+      font-family: var(--font-code); 
+      font-size: 13px; 
+      color: var(--accent-red); 
+      background: rgba(139, 58, 58, 0.08);
+      padding: 5px 10px; 
+      border-radius: 4px; 
+      display: inline-block; 
+      margin-bottom: 15px; /* Tight gap to next line */
+      font-weight: 500;
+    }
+
+    /* 2. Education Data (VS Code Style) */
+    .edu-data {
+      font-family: var(--font-code);
+      font-size: 15px;
+      color: var(--accent-green); /* Dark Green for visibility */
+      margin-bottom: 24px; /* Space before paragraph */
+      display: block;
+      
+      /* The "Active Line" look */
+      border-left: 3px solid var(--accent-red);
+      padding-left: 15px;
+      line-height: 1.4;
+    }
+
+    /* 3. Hero Paragraph */
+    .hero p{ 
+      font-size: 24px; 
+      color: var(--text-light-green);
+      max-width: 850px; 
+      font-weight: 400; 
+      margin-top: 0; 
+      line-height: 1.5;
+    }
+
+    /* Grid Layout */
+    .grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; flex: 1; }
+    
+    .card{ 
+      padding: 32px; 
+      background: var(--card-bg);
+      border: 1px solid var(--line); border-radius: 4px;
+      box-shadow: 4px 4px 0px rgba(47, 79, 79, 0.05);
+      transition: transform 0.2s ease;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .card:hover{ transform: translateY(-3px); border-color: var(--accent-green); }
+    
+    .card h3{ margin: 12px 0; font-size: 22px; color: var(--accent-green); }
+    .card p{ 
+      font-size: 19px; 
+      color: var(--muted); 
+      margin-bottom: 24px; 
+    }
+    
+    .tag{ 
+      font-family: var(--font-code); 
+      font-size: 13px; 
+      text-transform: uppercase; 
+      color: var(--accent-green);
+      border-bottom: 1px solid var(--line); 
+      padding-bottom: 4px; 
+      display: inline-block;
+      letter-spacing: -0.5px;
+    }
+    
+    .btn{ 
+      font-family: var(--font-code); 
+      font-size: 14px; 
+      font-weight: 700;
+      color: var(--accent-red); 
+      display: flex; align-items: center; gap: 6px;
+      margin-top: auto; 
+    }
+    .btn:hover{ gap: 12px; }
+
+    /* Footer */
+    footer{
+      margin-top: 100px; padding-top: 40px;
+      border-top: 2px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: 60px;
+      font-family: var(--font-code); 
+      font-size: 14px; 
+      color: var(--muted);
+    }
+    .contact-block{ display: flex; flex-direction: column; gap: 6px; }
+    .contact-label{ 
+      font-size: 12px; 
+      text-transform: uppercase; 
+      color: var(--accent-red); 
+      font-weight: bold;
+    }
+    .contact-link:hover{ color: var(--accent-green); text-decoration: underline; }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="active">/ Index</a>
+      <a href="projects.html">/ Projects</a>
+      <a href="writing.html">/ Writing</a>
+      <a href="art.html">/ Visual Lab</a>
+    </nav>
+
+    <header class="hero">
+      <h1>Ivy Weng</h1>
+      
+      <span class="status-bar">Social Studies → Stats & ML</span>
+      
+      <span class="edu-data">
+        B.A. Statistics & Machine Learning @ Carnegie Mellon University (Class of 2029)
+      </span>
+
+      <p>Quantitative Storyteller. <br>I bridge the gap between unstructured cultural data and systematic insights.</p>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <div>
+          <span class="tag">01. Systems</span>
+          <h3>Technical Projects</h3>
+          <p>Qiaopi network analysis, environmental data physicalization, and archival systems.</p>
+        </div>
+        <a href="projects.html" class="btn">View Data →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="tag">02. Logs</span>
+          <h3>Writing & Field Notes</h3>
+          <p>Sensory ethnography, place-based observation, and humanity research papers.</p>
+        </div>
+        <a href="writing.html" class="btn">Read Logs →</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="tag">03. Visuals</span>
+          <h3>Visual Lab</h3>
+          <p>Nüshu installation, stop-motion pipelines, and character illustration studies.</p>
+        </div>
+        <a href="art.html" class="btn">Enter Lab →</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="contact-block">
+        <span class="contact-label">Email</span>
+        <a href="mailto:iweng@andrew.cmu.edu" class="contact-link">iweng@andrew.cmu.edu</a>
+      </div>
+      <div class="contact-block">
+        <span class="contact-label">Phone</span>
+        <span class="contact-link">+1 (878) 670-5382</span>
+      </div>
+      <div class="contact-block">
+        <span class="contact-label">Location</span>
+        <span>Carnegie Mellon University</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

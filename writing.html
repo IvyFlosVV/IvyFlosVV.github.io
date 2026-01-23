@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing | Ivy Weng</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* RETRO WARM THEME */
+      --bg: #f2efe9;
+      --card-bg: #fbf9f5;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --line: rgba(47, 79, 79, 0.15);
+      --accent-green: #2f4f4f; 
+      --accent-red: #8b3a3a;
+      
+      /* FONTS */
+      --font-sans: "Crimson Pro", serif;
+      --font-code: "JetBrains Mono", monospace;
+    }
+
+    body{
+      margin:0; 
+      font-family: var(--font-sans);
+      background: var(--bg); 
+      color: var(--text); 
+      line-height: 1.6;
+      font-size: 20px; 
+    }
+    
+    a{ text-decoration: none; color: inherit; transition: 0.2s; }
+    
+    .wrap{ max-width: 960px; margin: 0 auto; padding: 80px 24px; min-height: 100vh; display: flex; flex-direction: column; }
+    
+    /* Navigation */
+    nav{ 
+      display: flex; gap: 30px; margin-bottom: 60px; 
+      border-bottom: 2px solid var(--line); padding-bottom: 24px; 
+    }
+    nav a{ 
+      color: var(--muted); 
+      font-size: 16px; 
+      font-weight: 500;
+      font-family: var(--font-code); 
+      text-transform: uppercase; 
+      letter-spacing: -0.5px; 
+    }
+    nav a:hover, nav a.active{ color: var(--accent-red); }
+
+    /* Page Title */
+    h1{ 
+      font-size: 48px; 
+      color: var(--accent-green); 
+      margin: 0 0 40px 0; 
+      border-left: 6px solid var(--accent-red); 
+      padding-left: 24px; 
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    /* Grid for Papers */
+    .writing-grid{ display: grid; gap: 40px; }
+    
+    .paper{ 
+      background: #fdfdfb; 
+      padding: 32px; 
+      border: 1px solid var(--line); 
+      border-radius: 4px;
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.03); 
+      transition: border-color 0.2s;
+    }
+    .paper:hover{ border-color: var(--accent-green); }
+    
+    /* Metadata Label */
+    .kicker{ 
+      font-family: var(--font-code); 
+      font-size: 13px; 
+      color: var(--accent-red); 
+      text-transform: uppercase; 
+      letter-spacing: -0.5px; 
+      margin-bottom: 12px; 
+      display: block;
+      font-weight: 500;
+    }
+    
+    .paper h2{ 
+      margin: 0 0 12px 0; 
+      font-size: 28px; 
+      color: var(--accent-green); 
+      line-height: 1.2;
+    }
+    
+    .paper p {
+      font-size: 19px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    /* Pull Quote Style */
+    .excerpt{ 
+      font-style: italic; 
+      color: var(--muted); 
+      border-left: 3px solid var(--accent-red); 
+      padding-left: 18px; 
+      margin: 20px 0 0 0; 
+      font-size: 18px;
+      background: rgba(139, 58, 58, 0.03);
+      padding: 15px 18px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 100px; padding-top: 40px;
+      border-top: 2px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: 60px;
+      font-family: var(--font-code); 
+      font-size: 14px; 
+      color: var(--muted);
+    }
+    .contact-block{ display: flex; flex-direction: column; gap: 6px; }
+    .contact-label{ 
+      font-size: 12px; 
+      text-transform: uppercase; 
+      color: var(--accent-red); 
+      font-weight: bold;
+    }
+    .contact-link:hover{ color: var(--accent-green); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html">← Index</a>
+      <a href="projects.html">/ Projects</a>
+      <a href="writing.html" class="active">/ Writing</a>
+      <a href="art.html">/ Visual Lab</a>
+    </nav>
+
+    <h1>Field Notes & Papers</h1>
+
+    <div class="writing-grid">
+      
+      <div class="paper">
+        <span class="kicker">Public Humanities / Research</span>
+        <h2>Qiaopi Series: The Infrastructure of Longing</h2>
+        <p>A collection of articles explaining the formats, routes, and institutions of overseas remittance.</p>
+        <p class="excerpt">"The letter is not just text; it is a receipt of survival, a data point in a vast network of diasporic finance."</p>
+      </div>
+
+      <div class="paper">
+        <span class="kicker">Sensory Ethnography</span>
+        <h2>First Encounters: A Living Archive</h2>
+        <p>Prose documentation of new environments—campus, cities, trains—treating the "self" as a sensor for cultural atmosphere.</p>
+        <p class="excerpt">"Capturing the light, distance, and small bright points of a city before familiarity dulls the data."</p>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="contact-block">
+        <span class="contact-label">Email</span>
+        <a href="mailto:iweng@andrew.cmu.edu" class="contact-link">iweng@andrew.cmu.edu</a>
+      </div>
+      <div class="contact-block">
+        <span class="contact-label">Phone</span>
+        <span class="contact-link">+1 (878) 670-5382</span>
+      </div>
+      <div class="contact-block">
+        <span class="contact-label">Location</span>
+        <span>Carnegie Mellon University</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

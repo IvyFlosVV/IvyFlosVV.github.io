@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Ivy Weng</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* RETRO WARM THEME */
+      --bg: #f2efe9;
+      --card-bg: #fbf9f5;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --line: rgba(47, 79, 79, 0.15);
+      --accent-green: #2f4f4f; 
+      --accent-red: #8b3a3a;
+      
+      /* FONTS */
+      --font-sans: "Crimson Pro", serif;
+      --font-code: "JetBrains Mono", monospace;
+    }
+
+    body{
+      margin:0; 
+      font-family: var(--font-sans);
+      background: var(--bg); 
+      color: var(--text); 
+      line-height: 1.6;
+      font-size: 20px; 
+    }
+    
+    a{ text-decoration: none; color: inherit; transition: 0.2s; }
+    
+    .wrap{ max-width: 960px; margin: 0 auto; padding: 80px 24px; min-height: 100vh; display: flex; flex-direction: column; }
+    
+    /* Navigation */
+    nav{ 
+      display: flex; gap: 30px; margin-bottom: 60px; 
+      border-bottom: 2px solid var(--line); padding-bottom: 24px; 
+    }
+    nav a{ 
+      color: var(--muted); 
+      font-size: 16px; 
+      font-weight: 500;
+      font-family: var(--font-code); 
+      text-transform: uppercase; 
+      letter-spacing: -0.5px; 
+    }
+    nav a:hover, nav a.active{ color: var(--accent-red); }
+
+    /* Page Title */
+    h1{ 
+      font-size: 48px; 
+      color: var(--accent-green); 
+      margin: 0 0 40px 0; 
+      border-left: 6px solid var(--accent-red); 
+      padding-left: 24px; 
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    /* Project Entries */
+    .proj-entry{ 
+      margin-bottom: 60px; 
+      padding-bottom: 50px; 
+      border-bottom: 1px dashed var(--line); 
+    }
+    .proj-entry:last-child{ border-bottom: none; }
+    
+    .meta{ 
+      font-family: var(--font-code); 
+      font-size: 13px; 
+      color: var(--accent-red); 
+      margin-bottom: 12px; 
+      display: block; 
+      font-weight: 500;
+      letter-spacing: -0.5px;
+    }
+    
+    h2{ 
+      margin: 0 0 16px 0; 
+      font-size: 32px; 
+      color: var(--accent-green); 
+      line-height: 1.2;
+    }
+    
+    .desc{ 
+      font-size: 21px; /* Larger body text */
+      color: var(--muted); 
+      max-width: 750px; 
+      margin-bottom: 24px; 
+    }
+    
+    .bullets{ list-style: none; padding: 0; }
+    .bullets li{ 
+      position: relative; 
+      padding-left: 24px; 
+      margin-bottom: 12px; 
+      color: var(--text); 
+      font-size: 19px;
+    }
+    .bullets li strong {
+      font-family: var(--font-code);
+      font-size: 15px;
+      color: var(--accent-green);
+      margin-right: 6px;
+    }
+    .bullets li::before{
+      content: "►"; 
+      color: var(--accent-red); 
+      font-size: 12px; 
+      position: absolute; left: 0; top: 6px;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 100px; padding-top: 40px;
+      border-top: 2px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: 60px;
+      font-family: var(--font-code); 
+      font-size: 14px; 
+      color: var(--muted);
+    }
+    .contact-block{ display: flex; flex-direction: column; gap: 6px; }
+    .contact-label{ 
+      font-size: 12px; 
+      text-transform: uppercase; 
+      color: var(--accent-red); 
+      font-weight: bold;
+    }
+    .contact-link:hover{ color: var(--accent-green); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="index.html">← Index</a>
+      <a href="projects.html" class="active">/ Projects</a>
+      <a href="writing.html">/ Writing</a>
+      <a href="art.html">/ Visual Lab</a>
+    </nav>
+
+    <h1>Systematic Frameworks</h1>
+
+    <article class="proj-entry">
+      <span class="meta">ARCHIVE / NETWORK ANALYSIS</span>
+      <h2>Qiaopi: Distributed Financial Systems</h2>
+      <p class="desc">Reinterpreting the Qiaopi remittance archives not just as letters, but as a historical analog to modern decentralized financial networks.</p>
+      <ul class="bullets">
+        <li><strong>Mapping:</strong> Visualized institutional routes to identify "emotional infrastructure" patterns in migration.</li>
+        <li><strong>Scale:</strong> Processed unstructured archival data into a public exhibition reaching 25,000+ visitors.</li>
+        <li><strong>Product:</strong> Engineered physical cultural products as tangible data-points for public education.</li>
+      </ul>
+    </article>
+
+    <article class="proj-entry">
+      <span class="meta">ENVIRONMENT / DATA VISUALIZATION</span>
+      <h2>Wind of Ocean Hues</h2>
+      <p class="desc">A data-physicalization project synthesizing offshore wind energy metrics into a coherent visual installation.</p>
+      <ul class="bullets">
+        <li><strong>Award:</strong> Bow Seat Ocean Awareness Bronze Medal.</li>
+        <li><strong>Method:</strong> Translated clean-energy capacity data into 3D modeled forms and translucent materials.</li>
+        <li><strong>Impact:</strong> Bridged the gap between technical energy specifications and public perception.</li>
+      </ul>
+    </article>
+
+    <footer>
+      <div class="contact-block">
+        <span class="contact-label">Email</span>
+        <a href="mailto:iweng@andrew.cmu.edu" class="contact-link">iweng@andrew.cmu.edu</a>
+      </div>
+      <div class="contact-block">
+        <span class="contact-label">Phone</span>
+        <span class="contact-link">+1 (878) 670-5382</span>
+      </div>
+      <div class="contact-block">
+        <span class="contact-label">Location</span>
+        <span>Carnegie Mellon University</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
