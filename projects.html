@@ -91,10 +91,19 @@
     }
     
     .desc{ 
-      font-size: 21px; /* Larger body text */
+      font-size: 21px; 
       color: var(--muted); 
       max-width: 750px; 
       margin-bottom: 24px; 
+    }
+
+    /* Image Styling */
+    .proj-img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 24px;
+      border: 1px solid var(--line);
+      display: block;
     }
     
     .bullets{ list-style: none; padding: 0; }
@@ -116,6 +125,17 @@
       color: var(--accent-red); 
       font-size: 12px; 
       position: absolute; left: 0; top: 6px;
+    }
+
+    .github-link {
+      font-family: var(--font-code);
+      color: var(--accent-red);
+      font-weight: 500;
+      border-bottom: 1px solid var(--accent-red);
+    }
+    .github-link:hover {
+      color: var(--accent-green);
+      border-bottom-color: var(--accent-green);
     }
 
     /* Footer */
@@ -147,6 +167,17 @@
     </nav>
 
     <h1>Systematic Frameworks</h1>
+
+    <article class="proj-entry">
+      <span class="meta">CS / ARTIFICIAL INTELLIGENCE</span>
+      <h2>Crossy Road Challenge</h2>
+      <img src="assets/crossy.jpg" alt="Crossy Road Challenge Screenshot" class="proj-img">
+      <p class="desc">An AI-driven exploration into pathfinding and collision logic, developed as part of a technical deep-dive into autonomous decision-making.</p>
+      <ul class="bullets">
+        <li><strong>Code:</strong> <a href="https://github.com/IvyFlosVV/AI_crossyroad_iweng" target="_blank" class="github-link">Click link to go to repository GitHub</a></li>
+        <li><strong>Logic:</strong> Engineered real-time obstacle avoidance and agent movement optimization.</li>
+      </ul>
+    </article>
 
     <article class="proj-entry">
       <span class="meta">ARCHIVE / NETWORK ANALYSIS</span>
