@@ -104,6 +104,7 @@
       margin-bottom: 24px;
       border: 1px solid var(--line);
       display: block;
+      background: white;
     }
     
     .bullets{ list-style: none; padding: 0; }
@@ -127,13 +128,17 @@
       position: absolute; left: 0; top: 6px;
     }
 
-    .github-link {
+    /* Link Styling */
+    .external-link {
       font-family: var(--font-code);
       color: var(--accent-red);
       font-weight: 500;
       border-bottom: 1px solid var(--accent-red);
+      font-size: 16px;
+      display: inline-block;
+      margin-top: 10px;
     }
-    .github-link:hover {
+    .external-link:hover {
       color: var(--accent-green);
       border-bottom-color: var(--accent-green);
     }
@@ -169,23 +174,35 @@
     <h1>Systematic Frameworks</h1>
 
     <article class="proj-entry">
+      <span class="meta">AI / GENERATIVE ART / API</span>
+      <h2>Muse & Machine</h2>
+      <img src="assets/artmuse.png" alt="Muse and Machine Interface" class="proj-img">
+      <p class="desc">A generative art explorer that curates masterpieces from the Art Institute of Chicago and uses Gemini 2.0 Flash to synthesize real-time "AI Curator" insights.</p>
+      <ul class="bullets">
+        <li><strong>Integration:</strong> Leveraged REST APIs to fetch high-resolution archival data.</li>
+        <li><strong>LLM:</strong> Implemented Google Gemini to generate contextual historical analysis for each artwork.</li>
+      </ul>
+      <a href="https://github.com/IvyFlosVV/MuseMachine.github.io" target="_blank" class="external-link">Click link to go to repository GitHub</a>
+    </article>
+
+    <article class="proj-entry">
       <span class="meta">CS / ARTIFICIAL INTELLIGENCE</span>
       <h2>Crossy Road Challenge</h2>
       <img src="assets/crossy.jpg" alt="Crossy Road Challenge Screenshot" class="proj-img">
       <p class="desc">An AI-driven exploration into pathfinding and collision logic, developed as part of a technical deep-dive into autonomous decision-making.</p>
       <ul class="bullets">
-        <li><strong>Code:</strong> <a href="https://github.com/IvyFlosVV/AI_crossyroad_iweng" target="_blank" class="github-link">Click link to go to repository GitHub</a></li>
         <li><strong>Logic:</strong> Engineered real-time obstacle avoidance and agent movement optimization.</li>
+        <li><strong>Development:</strong> Built as a Python-based simulation for algorithmic training.</li>
       </ul>
+      <a href="https://github.com/IvyFlosVV/AI_crossyroad_iweng" target="_blank" class="external-link">Click link to go to repository GitHub</a>
     </article>
 
     <article class="proj-entry">
       <span class="meta">ARCHIVE / NETWORK ANALYSIS</span>
       <h2>Qiaopi: Distributed Financial Systems</h2>
-      <p class="desc">Reinterpreting the Qiaopi remittance archives not just as letters, but as a historical analog to modern decentralized financial networks.</p>
+      <p class="desc">Reinterpreting the Qiaopi remittance archives as a historical analog to modern decentralized financial networks.</p>
       <ul class="bullets">
         <li><strong>Mapping:</strong> Visualized institutional routes to identify "emotional infrastructure" patterns in migration.</li>
-        <li><strong>Scale:</strong> Processed unstructured archival data into a public exhibition reaching 25,000+ visitors.</li>
         <li><strong>Product:</strong> Engineered physical cultural products as tangible data-points for public education.</li>
       </ul>
     </article>
@@ -197,7 +214,6 @@
       <ul class="bullets">
         <li><strong>Award:</strong> Bow Seat Ocean Awareness Bronze Medal.</li>
         <li><strong>Method:</strong> Translated clean-energy capacity data into 3D modeled forms and translucent materials.</li>
-        <li><strong>Impact:</strong> Bridged the gap between technical energy specifications and public perception.</li>
       </ul>
     </article>
 
