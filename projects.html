@@ -128,14 +128,38 @@
       position: absolute; left: 0; top: 6px;
     }
 
-    /* Link Styling */
+    /* === NEW BUTTON & LINK STYLES ADDED HERE === */
+    .link-container {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .demo-btn {
+      background-color: var(--accent-red);
+      color: #f2efe9 !important;
+      padding: 10px 20px;
+      font-family: var(--font-code);
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 2px;
+      transition: 0.2s;
+      display: inline-block;
+    }
+
+    .demo-btn:hover {
+      background-color: var(--accent-green);
+      transform: translateY(-2px);
+    }
+
     .external-link {
       font-family: var(--font-code);
       color: var(--accent-red);
       font-weight: 500;
       border-bottom: 1px solid var(--accent-red);
       font-size: 16px;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       margin-top: 10px;
     }
     .external-link:hover {
@@ -216,18 +240,6 @@
         <a href="https://github.com/IvyFlosVV/MuseMachine.github.io" target="_blank" class="external-link">GitHub Repository</a>
       </div>
     </article>
-    
-    <article class="proj-entry">
-      <span class="meta">AI / GENERATIVE ART / API</span>
-      <h2>Muse & Machine</h2>
-      <img src="assets/artmuse.png" alt="Muse and Machine Interface" class="proj-img">
-      <p class="desc">A generative art explorer that curates masterpieces from the Art Institute of Chicago and uses Gemini 2.0 Flash to synthesize real-time "AI Curator" insights.</p>
-      <ul class="bullets">
-        <li><strong>Integration:</strong> Leveraged REST APIs to fetch high-resolution archival data.</li>
-        <li><strong>LLM:</strong> Implemented Google Gemini to generate contextual historical analysis for each artwork.</li>
-      </ul>
-      <a href="https://github.com/IvyFlosVV/MuseMachine.github.io" target="_blank" class="external-link">Click link to go to repository GitHub</a>
-    </article>
 
     <article class="proj-entry">
       <span class="meta">CS / ARTIFICIAL INTELLIGENCE</span>
@@ -238,7 +250,9 @@
         <li><strong>Logic:</strong> Engineered real-time obstacle avoidance and agent movement optimization.</li>
         <li><strong>Development:</strong> Built as a Python-based simulation for algorithmic training.</li>
       </ul>
-      <a href="https://github.com/IvyFlosVV/AI_crossyroad_iweng" target="_blank" class="external-link">Click link to go to repository GitHub</a>
+      <div class="link-container">
+        <a href="https://github.com/IvyFlosVV/AI_crossyroad_iweng" target="_blank" class="external-link">GitHub Repository</a>
+      </div>
     </article>
 
     <article class="proj-entry">
